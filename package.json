@@ -1,6 +1,6 @@
 {
   "name": "dummee",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "stub/dummy function for testing purposes",
   "main": "index.js",
   "files": [
