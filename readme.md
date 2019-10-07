@@ -1,6 +1,10 @@
 
 # dummee
 
+[![Build Status](https://travis-ci.org/zzyyxxww/dummee.svg?branch=master)](https://travis-ci.org/zzyyxxww/dummee)
+[![codecov](https://codecov.io/gh/zzyyxxww/dummee/branch/master/graph/badge.svg)](https://codecov.io/gh/zzyyxxww/dummee)
+[![Maintainability](https://api.codeclimate.com/v1/badges/f103756df8cb1910959c/maintainability)](https://codeclimate.com/github/zzyyxxww/dummee/maintainability)
+
 lightweight stub/dummy function to test things.
 
 pretty much like [ninos](https://github.com/jamiebuilds/ninos) but standalone.

@@ -7,6 +7,7 @@
     "index.js"
   ],
   "scripts": {
+    "lint": "eslint **/*.js",
     "test": "nyc ava"
   },
   "repository": "https://github.com/zzyyxxww/dummee",
@@ -15,6 +16,11 @@
   "private": false,
   "devDependencies": {
     "ava": "^2.4.0",
+    "codecov": "^3.6.1",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-ava": "^9.0.0",
+    "eslint-plugin-import": "^2.18.2",
     "nyc": "^14.1.1"
   }
 }
