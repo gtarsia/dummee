@@ -9,6 +9,8 @@ pretty much like [ninos](https://github.com/jamiebuilds/ninos) but standalone.
 * intuitive api
 
 ```javascript
+const stub = require('dummee')
+
 const fn1 = stub()
 fn1(1, 2) // => undefined
 fn1.calls // => [{ args: [1, 2] }]
