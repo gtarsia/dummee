@@ -6,7 +6,7 @@ It's a fake or mock implementation of a real function.
 # When to use stubs
 
 Stubs are useful in unit testing to deal with the software that we have marginally less control over.  
-For example: network, filesystem, process operations and so on.
+For example: network, filesystem, process operations and so on. In other words, things that depend on external resources.
 
 Let's take a look at an example:
 
@@ -53,3 +53,10 @@ function draw(err) {
   ...
 }
 ```
+
+# When to not use stub
+
+Don't stub functions that don't deal with external resources.  
+Overusing stub can results in too optimistic tests.
+
+If function `a` depends on function `b`, and function `b` doesn't depend on external resources, then there's no need to stub `b` in `a`.
