@@ -1,0 +1,20 @@
+{
+  "name": "dummee",
+  "version": "0.0.0",
+  "description": "stub/dummy function for testing purposes",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "nyc ava"
+  },
+  "repository": "https://github.com/zzyyxxww/dummee",
+  "author": "zzyyxxww",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "ava": "^2.4.0",
+    "nyc": "^14.1.1"
+  }
+}
