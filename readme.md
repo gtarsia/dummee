@@ -25,3 +25,8 @@ fn2(2, 3) // => 5
 
 `yarn add --dev dummee` or  
 `npm install --save-dev dummee`
+
+## open to contributions
+
+help is needed in:
+* typescript definition and type check tests.
