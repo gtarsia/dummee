@@ -34,8 +34,10 @@ function draw(err, stubs = {}) {
 
 Then, when you're testing, you pass a stub function as `p`. In this case we use `dummee`:
 ```javascript
+const stub = require('dummee')
+
 const p = {
-  exit: dummee()
+  exit: stub()
 }
 draw('something went wrong', { p })
 p.exit // => { calls: [{ args: [1] }] }
