@@ -13,14 +13,18 @@ pretty much like [ninos](https://github.com/jamiebuilds/ninos) but standalone.
 * intuitive api
 
 ```javascript
-const stub = require('dummee')
+const dummee = require('dummee')
 
-const fn1 = stub()
-fn1(1, 2) // => undefined
-fn1.calls // => [{ args: [1, 2] }]
+const stub1 = dummee()
+stub1(1, 2) // => undefined
+stub1.calls // => [{ args: [1, 2] }]
 
-const fn2 = stub((i, j) => i + j)
-fn2(2, 3) // => 5
+const stub2 = dummee((i, j) => i + j)
+stub2(2, 3) // => 5
+
+// updating the callback
+stub2.cb = () => 'hey there'
+stub2 // () => 'hey there'
 ```
 
 [when to use stubbing](./docs/when-to-use-stubbing.md)
