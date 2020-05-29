@@ -24,7 +24,7 @@ stub2(2, 3) // => 5
 
 // updating the callback
 stub2.cb = () => 'hey there'
-stub2 // () => 'hey there'
+stub2() // 'hey there'
 ```
 
 [when to use stubbing](./docs/when-to-use-stubbing.md)
