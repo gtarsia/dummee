@@ -1,7 +1,7 @@
 const test = require('ava')
 const dummee = require('.')
 
-test('it should work normally', (t) => {
+test('dummee should work normally', (t) => {
   let n = 0
   const fn = () => {
     n = 1
@@ -15,9 +15,17 @@ test('it should work normally', (t) => {
   t.deepEqual(stub.calls, [{ args: [1, null, 3] }])
 })
 
-test('it should be able to change the cb of the stub', (t) => {
+test('dummee should be able to change the cb of the stub', (t) => {
   const stub = dummee(() => 3)
   t.is(stub(), 3)
   stub.cb = dummee(() => 'yo my man')
   t.is(stub(), 'yo my man')
+})
+
+test('stubIfTest should work correctly', (t) => {
+  const cb = () => 'doggie'
+  const stub = dummee.stubIfTest(cb)
+  t.deepEqual(stub.cb, cb)
+  process.env.NODE_ENV = 'hell'
+  t.deepEqual(dummee.stubIfTest(cb).cb, undefined)
 })

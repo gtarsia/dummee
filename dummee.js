@@ -1,5 +1,5 @@
 
-module.exports = function dummee(argFn = () => {}) {
+function dummee(argFn = () => {}) {
   const fn = function stub(...args) {
     fn.calls.push({ args })
     return fn.cb(...args)
@@ -8,3 +8,9 @@ module.exports = function dummee(argFn = () => {}) {
   fn.calls = []
   return fn
 }
+
+dummee.stubIfTest = function stubIfTest(fn) {
+  return process.env.NODE_ENV === 'test' ? dummee(fn) : fn
+}
+
+module.exports = dummee
