@@ -1,16 +1,18 @@
 
 # dummee
 
+
 [![Build Status](https://travis-ci.org/zzyyxxww/dummee.svg?branch=master)](https://travis-ci.org/zzyyxxww/dummee)
 [![codecov](https://codecov.io/gh/zzyyxxww/dummee/branch/master/graph/badge.svg)](https://codecov.io/gh/zzyyxxww/dummee)
 [![Maintainability](https://api.codeclimate.com/v1/badges/f103756df8cb1910959c/maintainability)](https://codeclimate.com/github/zzyyxxww/dummee/maintainability)
 
-lightweight stub/dummy function to test things.
+Javascript function stubbing to test things.
 
-pretty much like [ninos](https://github.com/jamiebuilds/ninos) but standalone.
+* Zero deps
+* Lightweight (312b unminified)
+* Intuitive API
 
-* lightweight
-* intuitive api
+Inspired by [ninos](https://github.com/jamiebuilds/ninos).
 
 ```javascript
 const dummee = require('dummee')
@@ -33,6 +35,27 @@ stub2() // 'hey there'
 
 `yarn add --dev dummee` or  
 `npm install --save-dev dummee`
+
+## also, this is handy:
+
+### `dummee.stubIfTest`
+
+This function `dummee`s a function you pass to it **only** if current `NODE_ENV` is `'test'`.
+
+```javascript
+const { stubIfTest } = require('dummee')
+function myFn(...) { ... }
+
+// if process.env.NODE_ENV is 'test'
+stubIfTest(myFn) // equivalent to dummee(myFn)
+
+// if process.env.NODE_ENV is anything else
+stubIfTest(myFn) // equivalent to myFn
+```
+
+This is very useful for my controlling functions called by the function I'm currently testing.
+
+*"That's a good trick" Anakin Skywalker*
 
 ## open to contributions
 

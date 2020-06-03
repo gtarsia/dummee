@@ -1,7 +1,7 @@
 {
   "name": "dummee",
   "version": "1.1.0",
-  "description": "stub/dummy function for testing purposes",
+  "description": "lightweight function stubbing for testing purposes",
   "main": "dummee.js",
   "files": [
     "dummee.js"
